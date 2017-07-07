@@ -126,7 +126,7 @@ Autre-&gt;0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="but_stop">
+              <object class="GtkButton" id="but_stopH">
                 <property name="label" translatable="yes">Arreter</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -260,34 +260,44 @@ Autre-&gt;0</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>
-  <object class="GtkDialog" id="BOT_Game">
+  <object class="GtkWindow" id="BOT_Game">
     <property name="can_focus">False</property>
-    <property name="type_hint">dialog</property>
     <signal name="destroy" handler="gtk_main_quit" swapped="no"/>
-    <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox2">
+    <child>
+      <object class="GtkBox" id="box7">
+        <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area2">
+        <child>
+          <object class="GtkLabel" id="lbl_bot">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Lancer les parties de bots!</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButtonBox" id="buttonbox3">
+            <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkComboBoxText" id="comboboxtext1">
+              <object class="GtkComboBoxText" id="cbt_strat">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="active">3</property>
                 <items>
-                  <item id="1" translatable="yes">Bouton1</item>
-                  <item id="2" translatable="yes">Bouton2</item>
-                  <item id="0" translatable="yes">30%</item>
+                  <item id="0" translatable="yes">Strat1</item>
+                  <item id="1" translatable="yes">Strat2</item>
                 </items>
               </object>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
@@ -299,38 +309,50 @@ Autre-&gt;0</property>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="but_startBot">
-                <property name="label" translatable="yes">Lancer</property>
+              <object class="GtkBox" id="box8">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="but_start">
+                    <property name="label" translatable="yes">Lancer</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="but_stopB">
+                    <property name="label" translatable="yes">Arreter</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">3</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="lbl_bot">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Score du Bot et tout</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>

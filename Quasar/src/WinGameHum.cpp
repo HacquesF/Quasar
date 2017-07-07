@@ -16,7 +16,7 @@ WinGameHum::WinGameHum(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>
 	builder->get_widget("but_getGains",but_getGains);
 	but_getGains->signal_clicked().connect( sigc::mem_fun(*this,&WinGameHum::on_clickGains));
 	
-	builder->get_widget("but_stop",but_stop);
+	builder->get_widget("but_stopH",but_stop);
 	but_stop->signal_clicked().connect( sigc::mem_fun(*this,&WinGameHum::on_clickStop));
 	
 	//-----------Label

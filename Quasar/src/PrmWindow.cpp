@@ -17,9 +17,12 @@ PrmWindow::PrmWindow(BaseObjectType* cobject, const Glib::RefPtr<Gtk::Builder>& 
 	
 	show_all_children();
 	
-	//--------------------Liaison fenetre Humain
+	//--------------------Liaison fenetres
 	refBuilder->get_widget_derived("HUM_Game",humWindow);
 	humWindow->moreInit(&q);
+	
+	refBuilder->get_widget_derived("BOT_Game",botWindow);
+	botWindow->moreInit(&q);
 }
 
 PrmWindow::~PrmWindow(){
@@ -29,7 +32,6 @@ void PrmWindow::moreInit(Glib::RefPtr<Gtk::Application>& app){
 }
 //--------Signal
 void PrmWindow::on_launchH(){
-	std::cout<<"lancement Humain: "<<nbArgent->get_value_as_int()<<std::endl;
 	//Cache la fenetre principale
 	//lance l autre avec l'argent
 	//relance la princ
@@ -38,5 +40,6 @@ void PrmWindow::on_launchH(){
 }
 
 void PrmWindow::on_launchB(){
-	std::cout<<"lancement Bot: "<<nbArgent->get_value_as_int()<<std::endl;
+	botWindow->prepare(nbArgent->get_value_as_int());
+	botWindow->show();
 }
