@@ -2,11 +2,12 @@
 EXEC=Quasar
 
 # Compiler-D_REENTRANT -L./lib/lib -Wl,-rpath,./lib/lib -Wl,--enable-new-dtags
-IDIR=
+IDIR=`pkg-config gtkmm-3.0 --cflags --libs`
 #IDIR=-I./lib/include/SDL2 -D_REENTRANT -L./lib/lib -Wl,-rpath,./lib/lib -Wl,--enable-new-dtags -lSDL2
 
 #IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 CXXFLAGS=-std=c++0x -g -Wall $(IDIR)
+
 
 # Linker
 LFLAGS=$(IDIR)

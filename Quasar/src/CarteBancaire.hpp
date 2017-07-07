@@ -25,5 +25,6 @@ class CarteBancaire{
 		void depot(int);
 		void retrait(int);
 		int getSolde();
+		void setSolde(int s);
 };
 #endif

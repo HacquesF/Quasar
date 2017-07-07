@@ -28,3 +28,6 @@ void CarteBancaire::retrait(int a){
 int CarteBancaire::getSolde(){
 	return solde_;
 }
+void CarteBancaire::setSolde(int s){
+	solde_ = s;
+}
