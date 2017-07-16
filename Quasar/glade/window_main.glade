@@ -55,7 +55,7 @@
             <property name="layout_style">spread</property>
             <child>
               <object class="GtkButton" id="button1">
-                <property name="label" translatable="yes">button1</property>
+                <property name="label" translatable="yes">4 - 7</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -68,7 +68,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button2">
-                <property name="label" translatable="yes">button2</property>
+                <property name="label" translatable="yes">1 - 8</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
